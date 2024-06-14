@@ -164,7 +164,10 @@ class Geoparser:
                  event_geoparse=False,
                  debug=False,
                  trim=None,
-                 check_es=True):
+                 check_es=True,
+                 es_hosts=['localhost'],
+                 es_port=9200,
+                 es_use_ssl=False):
         self.debug = debug
         self.trim = trim
         if not nlp:
@@ -179,7 +182,7 @@ class Geoparser:
                 logger.info(f"Error loading token_tensors pipe: {e}")
                 pass
             self.nlp = nlp
-        self.conn = make_conn()
+        self.conn = make_conn(es_hosts, es_port, es_use_ssl)
         if check_es:
             try:
                 assert len(list(geo.conn[1])) > 0
