@@ -11,3 +11,7 @@ ner/*
 _*
 .vscode/
 tmp/
+
+# Build artifacts
+build/
+*.egg-info

@@ -31,6 +31,7 @@ setup(
                              'assets/feature_code_dict.json',
                              'assets/hierarchy.txt',
                              'assets/mordecai_2023-03-28.pt',
+                             'assets/mordecai_2023-06-04.pt',
                              'assets/wikipedia-iso-country-codes.txt']}
 )
 
